@@ -58,10 +58,9 @@ AnotherBbGenerator.prototype.app = function app() {
   this.copy('404.html', 'app/404.html');
   this.copy('index.html', 'app/index.html');
 
-  this.copy('Gruntfile.js', 'Gruntfile.js');
-  
-  this.copy('_package.json', 'package.json');
-  this.copy('_bower.json', 'bower.json');
+  this.copy('_Gruntfile.js', 'Gruntfile.js');
+  this.template('_package.json', 'package.json');
+  this.template('_bower.json', 'bower.json');
 };
 
 AnotherBbGenerator.prototype.projectfiles = function projectfiles() {
