@@ -1,0 +1,15 @@
+{
+  "name": "<%=projectName%>",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-imagemin": "*",
+    "grunt-contrib-requirejs": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-hashify": "*",
+    "grunt-useref": "*",
+    "grunt-contrib-htmlmin": "*"
+  }
+}
