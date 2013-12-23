@@ -14,27 +14,16 @@ ViewGenerator.prototype.askFor = function askFor() {
   var prompts = [{
     name: 'viewName',
     message: 'What is your view name?'
-  }, 
-  {
-    name: 'viewParent',
-    message: 'What is your view parent?', 
-    default: 'Backbone.View'
-  }, 
-  {
-    name: 'viewPath',
-    message: 'Where do you wanna create your view?', 
-    default: 'views'
   }];
 
   this.prompt(prompts, function (props) {
     this.viewName = props.viewName;
-    this.viewParent = props.viewParent;
-    this.viewPath = props.viewPath;
 
     cb();
   }.bind(this));
 };
 
 ViewGenerator.prototype.files = function files() {
-  this.copy('view.js', 'app/js/' + this.viewPath + '/' + this.viewName.toLowerCase() + '.js');
+  this.copy('view.js', 'app/js/views/' + this.viewName.toLowerCase() + '.js');
+  this.copy('view.ejs', 'app/js/templates/' + this.viewName.toLowerCase() + '.ejs');
 };

@@ -18,28 +18,16 @@ CollectionGenerator.prototype.askFor = function askFor() {
   {
     name: 'collectionUrl',
     message: 'What is your collection URL?'
-  }, 
-  {
-    name: 'collectionParent',
-    message: 'What is your collection parent?', 
-    default: 'Backbone.Collection'
-  }, 
-  {
-    name: 'collectionPath',
-    message: 'Where do you wanna create your collection?', 
-    default: 'collections'
   }];
 
   this.prompt(prompts, function (props) {
     this.collectionName = props.collectionName;
     this.collectionUrl = props.collectionUrl;
-    this.collectionParent = props.collectionParent;
-    this.collectionPath = props.collectionPath;
 
     cb();
   }.bind(this));
 };
 
 CollectionGenerator.prototype.files = function files() {
-  this.copy('collection.js', 'app/js/' + this.collectionPath + '/' + this.collectionName.toLowerCase() + '.js');
+  this.copy('collection.js', 'app/js/collections/' + this.collectionName.toLowerCase() + '.js');
 };

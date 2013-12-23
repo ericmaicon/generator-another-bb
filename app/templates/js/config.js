@@ -7,7 +7,7 @@ require.config({
 
     paths: {
         lodash: '../../bower_components/lodash/lodash',
-        zepto: '../../bower_components/zepto/zepto',
+        jquery: '../../bower_components/jquery/jquery.min',
         backbone: '../../bower_components/backbone/backbone'
     },
 
@@ -15,13 +15,13 @@ require.config({
         lodash: {
             exports: '_'
         },
-        zepto: {
+        jquery: {
             exports: '$'
         },
         backbone: {
             deps: [
                 'lodash',
-                'zepto'
+                'jquery'
             ],
             exports: 'Backbone'
         }

@@ -1,11 +1,14 @@
-'use strict';
+define([
+    'lodash',
+    'backbone',
+    'app'
+], function (_, Backbone, App) {
+    'use strict';
 
-(function(<%=modelParent%>) {
-
-    <%=modelName%>Model = <%=modelParent%>.extend({
-        urlRoot: "<%=modelUrl%>", 
+    App.Models.<%=modelName%>Model = Backbone.Model.extend({
+        urlRoot: App.baseUrl + "/<%=modelUrl%>",
         defaults: {
         }
     });
 
-})(<%=modelParent%>); 
+});

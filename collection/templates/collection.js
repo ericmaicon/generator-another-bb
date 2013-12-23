@@ -1,10 +1,13 @@
-'use strict';
+define([
+    'lodash',
+    'backbone',
+    'app'
+], function (_, Backbone, App, EntidadeModel) {
+    'use strict';
 
-(function(<%=collectionParent%>, <%=collectionName%>Model) {
-
-    <%=collectionName%>Collection = <%=collectionParent%>.extend({
-        url: "<%=collectionUrl%>",
+    App.Collections.<%=collectionName%>Collection = Backbone.Collection.extend({
+        url: App.baseUrl + "/<%=collectionUrl%>",
         model: <%=collectionName%>Model
     });
 
-})(<%=collectionParent%>, <%=collectionName%>Model); 
+});

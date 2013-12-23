@@ -5,11 +5,14 @@ define([
     'use strict';
 
     // Provide a global location to place configuration settings and module creation.
-    var app = {
+    var App = {
+        Views: {
+
+        }
     };
 
     // Mix Backbone.Events, modules, and layout management into the app object.
-    return _.extend(app, {
+    return _.extend(App, {
 
         // Create a custom object with a nested Views object.
         module: function(additionalProps) {

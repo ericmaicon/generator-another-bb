@@ -1,18 +1,20 @@
 define([
+    'jquery',
+    'app',
     'backbone'
-], function(Backbone) {
+], function($, App, Backbone) {
     'use strict';
 
-    var Router = Backbone.Router.extend({
+    var AppRouter = Backbone.Router.extend({
         routes: {
-            '': 'index'
+            '': 'showDefaultFnc'
         },
 
-        index: function() {
+        showDefaultFnc: function() {
             console.log("oi");
         }
     });
 
-    return Router;
+    return AppRouter;
 });
 

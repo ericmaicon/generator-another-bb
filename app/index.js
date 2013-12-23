@@ -20,8 +20,6 @@ AnotherBbGenerator.prototype.askFor = function askFor() {
   var cb = this.async();
 
   // have Yeoman greet the user.
-  console.log(this.yeoman);
-
   var prompts = [{
     name: 'projectName',
     message: 'What is your project name?'
@@ -45,6 +43,7 @@ AnotherBbGenerator.prototype.app = function app() {
   this.mkdir('app/js');
   this.mkdir('app/js/collections');
   this.mkdir('app/js/helpers');
+  this.copy('js/helpers/template.js', 'app/js/helpers/template.js');
   this.mkdir('app/js/models');
   this.mkdir('app/js/modules');
   this.mkdir('app/js/routes');

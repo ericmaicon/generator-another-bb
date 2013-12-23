@@ -1,15 +1,22 @@
-(function(_, $, <%=viewParent%>) {
+define([
+    'lodash',
+    'zepto',
+    'backbone',
+    'app',
+    'helpers/template'
+], function (_, $, Backbone, App, JST) {
+    'use strict';
 
-    <%=viewName%>View = <%=viewParent%>.extend({
+    App.Views.<%=viewName%>View = Backbone.View.extend({
         
-        template: TemplateHelper.render("avaliador/form"),
+        template: JST['app/js/templates/<%=viewName.toLowerCase()%>.ejs'],
 
         render: function() {
-            this.$el.html(_.template(this.template, this.model.toJSON()));
+            this.$el.html(this.template);
 
             return this;
         }
 
     });
 
-})(_, $, <%=viewParent%>);
+});
