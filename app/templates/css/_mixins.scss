@@ -1,0 +1,17 @@
+//Cores
+$fonte: #7B7A82;
+$fonte-escura: #535353;
+$fonte-hover: #fff;
+
+$obj: #535353;
+$obj-hover: #EAEAEA;
+
+//Tamanhos
+$default-size: 16px;
+
+//Criando uma fonte default para o sistema inteiro
+@mixin fonte($size: $default-size, $color: $fonte) {
+    font-family: 'Raleway', sans-serif;
+    font-size: $size;
+    color: $color;
+}

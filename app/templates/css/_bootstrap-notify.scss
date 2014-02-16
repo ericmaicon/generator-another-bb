@@ -1,0 +1,16 @@
+.notifications {
+    z-index: 100000000;
+    position: fixed;
+}
+
+/* Positioning */ 
+.notifications.alerta {
+    right: 10px;
+    top: 25px;
+}
+/* Notification Element */
+.notifications > div {
+    position: relative;
+    z-index: 9999;
+    margin: 5px 0px;
+}

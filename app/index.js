@@ -35,10 +35,20 @@ AnotherBbGenerator.prototype.askFor = function askFor() {
 AnotherBbGenerator.prototype.app = function app() {
   this.mkdir('app');
   this.mkdir('app/css');
+  this.copy('css/_backgrid-paginator.scss', 'app/css/_backgrid-paginator.scss');
+  this.copy('css/_backgrid.scss', 'app/css/_backgrid.scss');
+  this.copy('css/_bootstrap-datepicker.scss', 'app/css/_bootstrap-datepicker.scss');
+  this.copy('css/_bootstrap-modal.scss', 'app/css/_bootstrap-modal.scss');
+  this.copy('css/_bootstrap-notify.scss', 'app/css/_bootstrap-notify.scss');
+  this.copy('css/_bootstrap-responsive.scss', 'app/css/_bootstrap-responsive.scss');
+  this.copy('css/_bootstrap.scss', 'app/css/_bootstrap.scss');
+  this.copy('css/_font-awesome.min.scss', 'app/css/_font-awesome.min.scss');
+  this.copy('css/_mixins.scss', 'app/css/_mixins.scss');
   this.copy('css/_normalize.scss', 'app/css/_normalize.scss');
+  this.copy('css/_select2.scss', 'app/css/_select2.scss');
   this.copy('css/main.scss', 'app/css/main.scss');
 
-  this.mkdir('app/img');
+  this.mkdir('app/images');
 
   this.mkdir('app/js');
   this.mkdir('app/js/collections');

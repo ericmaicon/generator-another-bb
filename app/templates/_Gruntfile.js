@@ -162,7 +162,7 @@ module.exports = function(grunt) {
             main: {
                 options: {
                     mode: 'zip',
-                    archive: 'dist.zip'
+                    archive: 'bee.war'
                 },
                 expand: true,
                 cwd: '<%=config.dist%>',
