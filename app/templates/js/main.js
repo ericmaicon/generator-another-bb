@@ -22,9 +22,6 @@ require([
         lng = $.cookie("i18next");
     }
 
-    //Definindo a linguagem da lib de números
-    numeral.language("pt-br");
-
     //iniciando o locale
     $.i18n.init({
         lng: lng,

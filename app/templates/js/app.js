@@ -13,7 +13,6 @@ define([
         },
         Views: {
         },
-        Parametro: null,
         Arrays: {},
         URL: "PUT_YOUR_URL_HERE"
     };

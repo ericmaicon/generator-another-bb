@@ -6,7 +6,7 @@ require.config({
     ],
 
     paths: {
-        'jquery': 'vendors/jquery.min',
+        'jquery': '../../bower_components/jquery/jquery.min',
         'jquery-mask': '../../bower_components/jQuery-Mask-Plugin/jquery.mask',
         'jquery-maskmoney': '../../bower_components/jquery-maskmoney/jquery.maskMoney',
         'jquery-cookie': '../../bower_components/jquery.cookie/jquery.cookie',

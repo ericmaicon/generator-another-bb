@@ -155,20 +155,6 @@ module.exports = function(grunt) {
                     dest: '<%=config.dist%>'
                 }]
             }
-        }, 
-
-        //compression
-        compress: {
-            main: {
-                options: {
-                    mode: 'zip',
-                    archive: 'bee.war'
-                },
-                expand: true,
-                cwd: '<%=config.dist%>',
-                src: ['**/*'],
-                dest: '/'
-            }
         }
     });
 
@@ -183,7 +169,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jst');
     grunt.loadNpmTasks('grunt-sprite-packer');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.loadNpmTasks('grunt-contrib-compress');
 
     grunt.registerTask('build', [
         'clean',
@@ -196,8 +181,7 @@ module.exports = function(grunt) {
         'useref',
         'htmlmin',
         'imagemin',
-        'clean:defaults', 
-        'compress'
+        'clean:defaults'
     ]);
 
     grunt.registerTask('dev', [

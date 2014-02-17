@@ -67,7 +67,19 @@ AnotherBbGenerator.prototype.app = function app() {
   this.copy('404.html', 'app/404.html');
   this.copy('index.html', 'app/index.html');
 
-  this.copy('_Gruntfile.js', 'Gruntfile.js');
+
+  this.mkdir('app/locales');
+  this.mkdir('app/en');
+  this.mkdir('app/es');
+  this.mkdir('app/pt');
+  this.copy('locales/en/translation.json', 'app/locales/en/translation.json');
+  this.copy('locales/es/translation.json', 'app/locales/es/translation.json');
+  this.copy('locales/pt/translation.json', 'app/locales/pt/translation.json');
+
+  this.mkdir('app/sprites');
+  this.copy('sprites/sprites.css.tpl', 'app/sprites/sprites.css.tpl');
+
+  this.template('_Gruntfile.js', 'Gruntfile.js');
   this.template('_package.json', 'package.json');
   this.template('_bower.json', 'bower.json');
 };
